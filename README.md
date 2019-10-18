@@ -49,15 +49,12 @@ The whole workflow of this project takes place in the script ***1D_PQ_Beziehung_
 
   1) Four packages get loaded and are used to:
 
-First Header | Second Header
+Package | Use
 ------------ | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
-
-
-
-  numpy | create arrays to work with
-  pandas | load profiles and connect seperate lists
+*numpy* | create arrays to work with
+*pandas* | load profiles and connect seperate lists
+*matplot* | plot figures
+*prettytable* | show results in a table
 
   2) asdf
 
