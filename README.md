@@ -47,7 +47,7 @@ J    = flow gradient
 ## Workflow
 The whole workflow of this project takes place in the script ***1D_PQ_Beziehung_kwy_5.0.py***. The script is subdivided in differnet steps, marked with a title.
 
-  1) Four packages get loaded and are used to:
+  **1) Four packages get loaded and are used to:**
 
    Package | Use
    ------------ | -------------
@@ -56,7 +56,8 @@ The whole workflow of this project takes place in the script ***1D_PQ_Beziehung_
    *matplot* | plot figures
    *prettytable* | show results in a table
 
-  2) Define parameters
+
+  **2) Define parameters**
   
   The user needs to define the four parameters:
 
@@ -68,7 +69,8 @@ The whole workflow of this project takes place in the script ***1D_PQ_Beziehung_
    *kst* | define the roughness value after Manning Strickler
    *J* | define the flow cradient as a fload (m/m)
    
-   3) Beginning of the loop
+   
+   **3) Beginning of the loop**
    
    asdf
 
