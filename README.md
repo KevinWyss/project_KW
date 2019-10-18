@@ -74,7 +74,14 @@ The whole workflow of this project takes place in the script ***1D_PQ_Beziehung_
    
    **3.1) Profile gets loaded
    
-   adsf
-
+   The profile which got defined in step 2) gets loaded into the script. In the same step the geographical elevation gets transformed into metric values
+   
+   **3.2) Intersections of the profile
+   
+   With linear interpolation, the intersections get generated at the points, where the water-level (h) crosses the profile line. This step needs a lot of conditions for example: When the point left of (i) is higher than the water level (h) and the next point (i+1) is lower than the water-level (h) there need to be a intersection point. As told there enters linear interpolation into force:
+   
+    xa = x1 + (ya - y1) * ((x1 - x2) / (y1 - y2))
+    
+xa  = 
 # Results
 PDF file "??" in the project folder.
