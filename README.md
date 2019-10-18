@@ -38,11 +38,9 @@ The river cross sections got measured with DGPS (Differential Global Positioning
  
     vm [m/s] = kst [] * Rhy^(2/3) [m] * J^(1/2) [m/m]
    
-kst  = roughness coefficient after Manning Strickler 
-
-Rhy  = hydraulic radius 
-
-J    = flow gradient 
+    kst  = roughness coefficient after Manning Strickler 
+    Rhy  = hydraulic radius 
+    J    = flow gradient 
 
 ## Workflow
 The whole workflow of this project takes place in the script ***1D_PQ_Beziehung_kwy_5.0.py***. The script is subdivided in differnet steps, marked with a title.
@@ -74,7 +72,7 @@ The whole workflow of this project takes place in the script ***1D_PQ_Beziehung_
    
    3.1) Profile gets loaded
    
-   The profile which got defined in step 2) gets loaded into the script. In the same step the geographical elevation gets transformed into metric values
+   The profile which got defined in step 2) gets loaded into the script. In the same step the geographical elevation gets transformed into metric values.
    
    3.2) Intersections of the profile
    
@@ -82,9 +80,8 @@ The whole workflow of this project takes place in the script ***1D_PQ_Beziehung_
    
     xa = x1 + (ya - y1) * ((x1 - x2) / (y1 - y2))
     
-xa  = wanted x-coordinate where the water-level crosses the profile line
-
-ya  = hight of the water-level (h)
+    xa  = wanted x-coordinate where the water-level crosses the profile line
+    ya  = hight of the water-level (h)
 
 Like the example above, there are 21 other conditions which need to be checked, to get all intersections with the water-level.
 
