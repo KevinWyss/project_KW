@@ -49,14 +49,28 @@ The whole workflow of this project takes place in the script ***1D_PQ_Beziehung_
 
   1) Four packages get loaded and are used to:
 
-Package | Use
------------- | -------------
-*numpy* | create arrays to work with
-*pandas* | load profiles and connect seperate lists
-*matplot* | plot figures
-*prettytable* | show results in a table
+   Package | Use
+   ------------ | -------------
+   *numpy* | create arrays to work with
+   *pandas* | load profiles and connect seperate lists
+   *matplot* | plot figures
+   *prettytable* | show results in a table
 
-  2) asdf
+  2) Define parameters
+  
+  The user needs to define the four parameters:
+
+   Shortcut | Parameter
+   ------------ | -------------
+   *pn* | define the profile name
+   *fn* | define the file name which should be stored in the same folder as the script
+   *h* | define the water-level which should be investigated (cm)
+   *kst* | define the roughness value after Manning Strickler
+   *J* | define the flow cradient as a fload (m/m)
+   
+   3) Beginning of the loop
+   
+   asdf
 
 # Results
 PDF file "??" in the project folder.
