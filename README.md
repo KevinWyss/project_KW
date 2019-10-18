@@ -45,7 +45,18 @@ Rhy  = hydraulic radius
 J    = flow gradient 
 
 ## Workflow
-skript...
+The whole workflow of this project takes place in the script ***1D_PQ_Beziehung_kwy_5.0.py***. The script is subdivided in differnet steps, marked with a title.
+
+  1) Four packages get loaded and are used to:
+  Package | Use
+  numpy | create arrays to work with
+  pandas | load profiles and connect seperate lists
+     - *numpy*
+     - *pandas*
+     - matplot
+     - prettytable
+  
+  2) asdf
 
 # Results
-PDF file in the project folder...
+PDF file "??" in the project folder.
