@@ -48,14 +48,17 @@ J    = flow gradient
 The whole workflow of this project takes place in the script ***1D_PQ_Beziehung_kwy_5.0.py***. The script is subdivided in differnet steps, marked with a title.
 
   1) Four packages get loaded and are used to:
-  Package | Use
+
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
+
+
+
   numpy | create arrays to work with
   pandas | load profiles and connect seperate lists
-     - *numpy*
-     - *pandas*
-     - matplot
-     - prettytable
-  
+
   2) asdf
 
 # Results
