@@ -83,7 +83,16 @@ The whole workflow of this project takes place in the script ***1D_PQ_Beziehung_
     xa  = wanted x-coordinate where the water-level crosses the profile line
     ya  = hight of the water-level (h)
 
-Like the example above, there are 21 other conditions which need to be checked, to get all intersections with the water-level.
+Like the example above, there are 20 other conditions which need to be checked, to get all intersections of the profile line with the water-level.
 
+   3.3) Preconditione for the following parameter calculations
+   
+   In this step the new x- and y-coordinates (with the intersection points) get put into new list, which then get adapted to the water-level (h). The points higher than h get set on the water-level, which results in a thinned profile.
+   
+   3.4) Calculation of the area (A)
+   
+   
+   
+   
 # Results
 PDF file "??" in the project folder.
