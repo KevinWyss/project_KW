@@ -1,6 +1,6 @@
 # 2019-numeric-hydraulic-1D-discharge-modelling
 ## Automated stage-discharge-relationships out of DGPS and drone-crosssections in an alpine river
-### Python 2.7, IDE PyCharm 2018.2.5 Community Edition
+### *Python 2.7, IDE PyCharm 2018.2.5 Community Edition*
 
 This project is part of my master thesis about "Discharge measurements in alpine rivers - Opportunities of numeric hydraulic stage-discharge-relationships". The whole project got developped in the partnership of the Institute of Geography, department of hydrology and the hydro power company Kraftwerke Oberhasli AG (KWO).
 
