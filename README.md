@@ -39,5 +39,7 @@ The river cross sections got measured with DGPS (Differential Global Positioning
     vm [m/s] = kst [] * Rhy^(2/3) [m] * J^(1/2) [m/m]
    
 kst  = roughness coefficient after Manning Strickler
+
 Rhy  = hydraulic radius
+
 J    = flow gradient
