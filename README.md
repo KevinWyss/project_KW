@@ -72,16 +72,21 @@ The whole workflow of this project takes place in the script ***1D_PQ_Beziehung_
    
    Bevore the loop starts, the script creates five empty lists, which then get filled with the calculated area (A), wet perimeter (P), hydraulic radius (Rhy) and the discharge (Q) for different hights (H), starting at 0.1, 0.11, 0.12... until the users definded water-level (h). 
    
-   **3.1) Profile gets loaded
+   3.1) Profile gets loaded
    
    The profile which got defined in step 2) gets loaded into the script. In the same step the geographical elevation gets transformed into metric values
    
-   **3.2) Intersections of the profile
+   3.2) Intersections of the profile
    
    With linear interpolation, the intersections get generated at the points, where the water-level (h) crosses the profile line. This step needs a lot of conditions for example: When the point left of (i) is higher than the water level (h) and the next point (i+1) is lower than the water-level (h) there need to be a intersection point. As told there enters linear interpolation into force:
    
     xa = x1 + (ya - y1) * ((x1 - x2) / (y1 - y2))
     
-xa  = 
+xa  = wanted x-coordinate where the water-level crosses the profile line
+
+ya  = hight of the water-level (h)
+
+Like the example above, there are 21 other conditions which need to be checked, to get all intersections with the water-level.
+
 # Results
 PDF file "??" in the project folder.
