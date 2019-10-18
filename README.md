@@ -56,8 +56,7 @@ The whole workflow of this project takes place in the script ***1D_PQ_Beziehung_
    *matplot* | plot figures
    *prettytable* | show results in a table
 
-
-  **2) Define parameters**
+  **2) Define parameters:**
   
   The user needs to define the four parameters:
 
@@ -69,10 +68,13 @@ The whole workflow of this project takes place in the script ***1D_PQ_Beziehung_
    *kst* | define the roughness value after Manning Strickler
    *J* | define the flow cradient as a fload (m/m)
    
+   **3) Beginning of the loop:**
    
-   **3) Beginning of the loop**
+   Bevore the loop starts, the script creates five empty lists, which then get filled with the calculated area (A), wet perimeter (P), hydraulic radius (Rhy) and the discharge (Q) for different hights (H), starting at 0.1, 0.11, 0.12... until the users definded water-level (h). 
    
-   asdf
+   **3.1) Profile gets loaded
+   
+   adsf
 
 # Results
 PDF file "??" in the project folder.
