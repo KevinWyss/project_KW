@@ -140,12 +140,15 @@ To get the whole area between water-level and profile, all these sub-areas get s
     Q [m^s/s] = kst * Rhy^(2/3) [m] * J^(1/2) * A [m^2]
    
    **4) PrettyTable**
+   
    After the loop comes to an end and all the calculation (h, A, P, Rhy and Q) is done, the package *PrettyTable* illustrates all the results in a table for a good overview.
    
    **5) Plotting the profil**
+   
    The first plot illustrates the cross section with the thinned profile. This plot showes all the profile points and the effectively used profile points for the calculations above. This is not only a pretty illustration, it also functions as a monitoring tool, to check if the script generated the intersection points at the right place.
    
    **6) Plotting the stage-discharge-relationship**
+   
    As the last step, the script plotts the resulting stage-discharge-relationship for the entered cross section. This relationship is based on the calculations 3.2 - 3.7 for all different hights (H).
    
 # Results
