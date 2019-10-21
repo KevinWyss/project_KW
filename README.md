@@ -141,7 +141,7 @@ To get the whole area between water-level and profile, all these sub-areas get s
    
    **4) PrettyTable**
    
-   After the loop comes to an end and all the calculation (h, A, P, Rhy and Q) is done, the package *PrettyTable* illustrates all the results in a table for a good overview.
+   After the loop comes to an end and all the calculation (h, A, P, Rhy and Q) is done, the package *PrettyTable* illustrates the results in a table for a good overview.
    
    **5) Plotting the profil**
    
