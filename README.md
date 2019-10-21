@@ -6,7 +6,7 @@ This project is part of my master thesis about "Discharge measurements in alpine
 
 If you want a more detailed insight of the project, you will find a PDF ("") in my project folder.
 
-Author: Kevin Wyss, 14-104-640, University of Berne, Seminar Geodata analysis and modelling 2019
+Author: Kevin Wyss, 14-104-640, kevin.wyss@students.unibe.ch, University of Berne, Seminar Geodata analysis and modelling 2019
 
 ## Goal of the script
 The goal of this python script is to create an automated stage-discharge-relationship out of a measured river crosssection.
@@ -135,13 +135,20 @@ To get the whole area between water-level and profile, all these sub-areas get s
     Rhy [m] = A [m^2] / P [m]
      
      
-   3.7) Calculation of the discharge (Q)
+   3.7) Calculation of the discharge (Q) and ending of the loop
    
    The discharge gets calculated as in the chapter ***One dimensional numeric-hydraulic-modelling*** above describet:
    
     Q [m^s/s] = kst * Rhy^(2/3) [m] * J^(1/2) * A [m^2]
    
+   **4) PrettyTable**
+   After the loop comes to an end and all the calculation (h, A, P, Rhy and Q) is done, the package *PrettyTable* illustrates all the results in a table for a good overview
    
+   **5) Plotting the profil**
+   The first plot illustrates the cross section with the thinned profile. This plot showes all the profile points with the effectively used profile points for the calculations above. This is not only a pretty illustration, it also functions as a monitoring tool, to check if the script generated the intersection points at the right place.
+   
+   **6) Plotting the stage-discharge-relationship**
+   As the last step, the script plotts the resulting stage-discharge-relationship for the entered cross section. This relationship is based on the calculations 3.2 - 3.7 for all different hights (H).
    
 # Results
-PDF file "??" in the project folder.
+To get a more precise insight of the resulting output of the script, see the PDF "???" in my project folder.
