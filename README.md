@@ -1,8 +1,8 @@
 # 2019-numeric-hydraulic-1D-discharge-modelling
-## Automated stage-discharge-relationships out of DGPS and drone-crosssections in an alpine river
+## Automated stage-discharge-relationships out of DGPS and drone cross sections in an alpine river
 ### *Python 2.7, IDE PyCharm 2018.2.5 Community Edition*
 
-This project is part of my master thesis about "Discharge measurements in alpine rivers - Opportunities of numeric hydraulic stage-discharge-relationships". The whole project got developed in the partnership of the Institute of Geography, department of hydrology and the hydropower company Kraftwerke Oberhasli AG (KWO).
+This project is part of my master thesis about "Discharge measurements in alpine rivers - Opportunities of numeric hydraulic stage-discharge-relationships". The whole project got developed in partnership with the Institute of Geography, department of hydrology and the hydropower company Kraftwerke Oberhasli AG (KWO).
 
 Author: Kevin Wyss, 14-104-640, kevin.wyss@students.unibe.ch, University of Berne, Seminar Geodata analysis and modelling 2019
 
@@ -10,29 +10,29 @@ Author: Kevin Wyss, 14-104-640, kevin.wyss@students.unibe.ch, University of Bern
 The goal of this python script is to create an automated stage-discharge-relationship out of a measured river cross section.
 
 ## Investigation Area
-My area of intrest concerning four rivers in the region of Susten and Grimsel:
+The areas of intrest involve four rivers in the region of Susten and Grimsel:
   - Steinwasser
   - Giglibach
   - Wendenwasser
   - Hasliaare
 
-The idea of those four alpine rivers where the different types of morphology. Steinwasser and Wendenwasser are two alpine rivers with medium steepness. Giglibach is an apline torrent and Hasliaare, as the prime site, is a wide and shallow river, investigated in Innertkirchen.
+The idea of those four alpine rivers are the different types of morphology. Steinwasser and Wendenwasser are two alpine rivers with medium steepness. Giglibach is an alpine torrent and Hasliaare, as the prime site, is a wide and shallow river, investigated in Innertkirchen.
 
 ## Input parameters, measurements and processing
-The success of this project was joint with a lot of field work and data collection. The following input parameters are necessary to run the script:
-  - River crosssections
+The success of this project was jointed with a lot of field work and data collection. The following input parameters are necessary to run the script:
+  - River cross sections
   - Digital elevation models to set the flow gradient
   - Permanent stage mesurements at the particular cross sections
   - Discharge measurements to kalibrate the roughness coefficient
 
-The river cross sections got measured with DGPS (Differential Global Positioning System). The DGPS cross sections get directly loaded into the python script as text files. To get a more precise (higher point density) cross section, the area of interest got flown by a DJI professional drone. The created photographs got post processed with a structure from motion software (Agisoft PhotoScan) to generate a digital elevation model (DEM). The DEM was used to create high precision cross sections and to calculate the flow gradient. To get those inforamtions out of the DEM, the Software QGIS Desktop (2.18.10) was used. The permanent recording of the water-level got done by pressure probes by Altecno. The probe measures the stage every minute and creates an average over ten minutes. The information about the water level is necessary in combination of the manually measured discharge and the resulting stage-discharge-relationship. The discharge got measured with the salt dilution method, which means, that a certain abount of salt (dependent on the amount of discharge - 5kg salt for one cubic meter per second discharge) gets added to the river. After enough stirring distance the salt flows through an analyzer of electronic conductivity, which leads through the integration of the salt curve to the discharge.
+The river cross sections was measured with DGPS (Differential Global Positioning System). The DGPS cross sections are directly loaded into the python script as text files. To get a more precise (higher point density) cross section, the area of interest were flown by a DJI professional drone. The created photographs have been post processed with a structure from motion software (Agisoft PhotoScan) to generate a digital elevation model (DEM). The DEM was used to create high precision cross sections and to calculate the flow gradient. To get those inforamtions out of the DEM, the Software QGIS Desktop (2.18.10) was used. The permanent recording of the water-level has been done by pressure probes by Altecno. The probe measures the stage every minute and creates an average over ten minutes. The information about the water level is necessary in combination with the manually measured discharge and the resulting stage-discharge-relationship. The discharge has been measured with the salt dilution method, which means, that a certain amount of salt (dependent on the amount of discharge - 5kg salt for one cubic meter per second discharge) gets added to the river. After enough stirring distance the salt flows through an analyzer of electronic conductivity, which leads through the integration of the salt curve to the discharge.
 
 ## One-dimensional numeric-hydraulic-modelling
  One dimensional numeric hydraulic modelling depends on the flow formula after Manning Strickler. In this sence the discharge (Q) results out of the multiplication of flow velocity (vm), which is supposed to be equal in the whole cross section, and the flown through area (A).
  
     Q [l/s] = vm [m/s] * A [m^2]
  
- Whereat the flow velocity (vm) gets calculated:
+ Whereat the flow velocity (vm) is calculated:
  
     vm [m/s] = kst [] * Rhy^(2/3) [m] * J^(1/2) [m/m]
    
@@ -40,16 +40,16 @@ The river cross sections got measured with DGPS (Differential Global Positioning
     Rhy  = hydraulic radius 
     J    = flow gradient 
 
- The hydraulic radius (Rhy) gets calculated out of the two profile-known parameters:
+ The hydraulic radius (Rhy) is calculated out of the two profile-known parameters:
  
     Rhy [m] = A [m^2] / P [m]
     
     P   = wetted perimeter
  
 ## Workflow
-The whole workflow of this project takes place in the script ***1D_PQ_Beziehung_kwy_5.0.py***. The script is subdivided in differnet steps, marked with a title.
+The whole workflow of this project takes place in the script ***1D_PQ_Beziehung_kwy_5.0.py***. The script is subdivided in differnet steps, each marked with a title.
 
-  **1) Four packages get loaded and are used to:**
+  **1) Load four packages:**
 
    Package | Use
    ------------ | -------------
@@ -72,28 +72,28 @@ The whole workflow of this project takes place in the script ***1D_PQ_Beziehung_
    
    **3) Beginning of the loop:**
    
-   Bevore the loop starts, the script creates five empty lists, which then get filled with the calculated area (A), wet perimeter (P), hydraulic radius (Rhy) and the discharge (Q) for different hights (H). *H* is starting at 0.1, 0.11, 0.12, [...] until the users definded water-level (h). The loop is used to do all the calculations below (3.2 - 3.7) for all the different hights (H), to get a stage-discharge-relation ship in the end.
+   Before the loop starts, the script creates five empty lists, which are then filled with the calculated area (A), wet perimeter (P), hydraulic radius (Rhy) and the discharge (Q) for different hights (H). *H* is starting at 0.1, 0.11, 0.12, [...] until the users definded water-level (h). The loop is used to do all the calculations below (3.2 - 3.7) for all the different hights (H), to get a stage-discharge-relation ship in the end.
    
    3.1) Profile gets loaded
    
-   The profile which got defined in step 2) gets loaded into the script. In the same step the geographical altitude gets transformed into meter-hights. This happens by the subtraction of all altitudes with the minimum altitude of the list. After this step, every point in the profile list has an x- and y-coordinate. The x-coordinate is the measured distance (starting at 0 m) and the y-coordinate is the hight.
+   The profile which was defined in step 2) gets loaded into the script. In the same step the geographical altitude gets transformed into meter-hights. This happens by the subtraction of all altitudes with the minimum altitude of the list. After this step, every point in the profile list has an x- and y-coordinate. The x-coordinate stays for the measured distance (starting at 0 m) and the y-coordinate stays for the hight.
    
    
    3.2) Intersections of the profile
    
-   With linear interpolation, the intersections get generated at the points, where the water-level (h) crosses the profile line. This step needs a lot of conditions for example: When the point left (i-1) of (i) is higher than the water level (h) and the next point (i+1) is lower than the water-level (h) there needs to be an intersection point. As told there enters linear interpolation into force:
+   With linear interpolation, the intersections are generated at the points, where the water-level (h) crosses the profile line. This step needs a lot of conditions, for example: When the point left (i-1) of (i) is higher than the water level (h) and the next point (i+1) is lower than the water-level (h) there needs to be an intersection point. As described above there enters linear interpolation into force:
    
     xa = x1 + (ya - y1) * ((x1 - x2) / (y1 - y2))
     
     xa  = wanted x-coordinate where the water-level crosses the profile line
     ya  = hight of the water-level (h)
 
-Like the example above, there are 20 other conditions which need to be checked, to get all intersections of the profile with the water-level.
+As shown in the example above, there are 20 other conditions which need to be checked, to get all intersections of the profile with the water-level.
 
 
    3.3) Preconditione for the following parameter calculations
    
-   In this step the new x- and y-coordinates (with the intersection points) get put into a new list, which then gets adapted to the water-level (h). The points higher than h get set on the water-level, which results in a thinned profile.
+   In this step the new x- and y-coordinates (with the intersection points) were set into a new list, which then gets adapted to the water-level (h). The points higher than h get set on the water-level, which results in a thinned profile.
    
    
    3.4) Calculation of the area (A)
@@ -128,24 +128,24 @@ To get the whole area between water-level and profile, all these sub-areas get s
    
    3.6) Calculation of the hydraulic radius (Rhy)
    
-   The hydrualic radius gets calculated out of the division of the area (A) and the wetted perimeter (P):
+   The hydrualic radius is being calculated out of the division of the area (A) and the wetted perimeter (P):
    
     Rhy [m] = A [m^2] / P [m]
      
      
    3.7) Calculation of the discharge (Q) and ending of the loop
    
-   The discharge gets calculated as in the chapter ***One dimensional numeric-hydraulic-modelling*** above describet:
+   The discharge is being calculated as in the chapter ***One dimensional numeric-hydraulic-modelling*** described above:
    
     Q [m^s/s] = kst * Rhy^(2/3) [m] * J^(1/2) * A [m^2]
    
    **4) PrettyTable**
    
-   After the loop comes to an end and all the calculation (h, A, P, Rhy and Q) is done, the package *PrettyTable* illustrates the results in a table for a good overview.
+   After the loop comes to an end and all the calculation (h, A, P, Rhy and Q) is done, the package *PrettyTable* illustrates the entire results in a table for a good overview.
    
    **5) Plotting the profil**
    
-   The first plot illustrates the cross section with the thinned profile. This plot showes all the profile points and the effectively used profile points for the calculations above. This is not only a pretty illustration, it also functions as a monitoring tool, to check if the script generated the intersection points at the right place.
+   The first plot illustrates the cross section with the thinned profile. This plot shows all profile points and the effectively used profile points for the calculations above. This is not only an illustration, it also functions as a monitoring tool, to check if the script generated the intersection points at the right place.
    
    **6) Plotting the stage-discharge-relationship**
    
