@@ -70,19 +70,20 @@ The whole workflow of this project takes place in the script ***1D_PQ_Beziehung_
    *fn* | define the file name which should be stored in the same folder as the script
    *h* | define the water-level which should be investigated (cm)
    *kst* | define the roughness value after Manning Strickler
-   *J* | define the flow cradient as a fload (m/m)
+   *J* | define the flow gradient as a float (m/m)
    
    **3) Beginning of the loop:**
    
-   Bevore the loop starts, the script creates five empty lists, which then get filled with the calculated area (A), wet perimeter (P), hydraulic radius (Rhy) and the discharge (Q) for different hights (H), starting at 0.1, 0.11, 0.12... until the users definded water-level (h). 
+   Bevore the loop starts, the script creates five empty lists, which then get filled with the calculated area (A), wet perimeter (P), hydraulic radius (Rhy) and the discharge (Q) for different hights (H), starting at 0.1, 0.11, 0.12... until the users definded water-level (h). The loop is used to do all the calculations below (3.2 - 3.7) for all the different hights (H), to get a stage-discharge-relation ship in the end.
    
    3.1) Profile gets loaded
    
    The profile which got defined in step 2) gets loaded into the script. In the same step the geographical elevation gets transformed into metric values.
    
+   
    3.2) Intersections of the profile
    
-   With linear interpolation, the intersections get generated at the points, where the water-level (h) crosses the profile line. This step needs a lot of conditions for example: When the point left of (i) is higher than the water level (h) and the next point (i+1) is lower than the water-level (h) there need to be a intersection point. As told there enters linear interpolation into force:
+   With linear interpolation, the intersections get generated at the points, where the water-level (h) crosses the profile line. This step needs a lot of conditions for example: When the point left of (i) is higher than the water level (h) and the next point (i+1) is lower than the water-level (h) there needs to be an intersection point. As told there enters linear interpolation into force:
    
     xa = x1 + (ya - y1) * ((x1 - x2) / (y1 - y2))
     
@@ -91,12 +92,54 @@ The whole workflow of this project takes place in the script ***1D_PQ_Beziehung_
 
 Like the example above, there are 20 other conditions which need to be checked, to get all intersections of the profile line with the water-level.
 
+
    3.3) Preconditione for the following parameter calculations
    
    In this step the new x- and y-coordinates (with the intersection points) get put into new list, which then get adapted to the water-level (h). The points higher than h get set on the water-level, which results in a thinned profile.
    
+   
    3.4) Calculation of the area (A)
    
+   The area (A) to be calculated is the area between the water-level and the profile curve. This calculation happens for the area between each profile point like this:
+   
+    A [m^2] = 0.5 * (x2 - x1) * (WD1 + WD2)
+      
+    x2  = x-coordinate of the point i+1
+    x1  = x-coordinate of the point i
+    WD1 = water depth of point i (= the water-level (h) minus y-coordinate of point i)  
+    WD2 = water depth of point i+1 (= the water-level (h) minus y-coordinate of point i+1)  
+      
+To get the whole area between water-level and profile, all these sub-areas get summed up.
+
+
+   3.5) Calculation of the wetted perimeter (P)
+   
+   The wetted perimeter (P) gets calculated with vector geometry. As a first step to get the distance between all profile-points, the script calculates the direction vector (AB) between each point:
+    
+    AB = (x2, y2) - (x1, y1)
+      
+    x2, y2  = x- and y-coordinate of the point i+1
+    x1, y1  = x- and y-coordinate of the point i
+  
+ This results in a new list, CD, with all direction vectors of the profile. To get the actual distance between the points, the script needs to calculate the absolute value (|CD|) of the direction vectors:
+ 
+    |CD| = square root(C^2 + D^2)
+    
+ In a following while-loop, the point distances get sorted out, which are effectively wetted and which are not. The script from now on processes only the wetted distances and summes those up to get the wetted perimeter (P).
+   
+   
+   3.6) Calculation of the hydraulic radius (Rhy)
+   
+   The hydrualic radius gets calculated out of the division of the area (A) and the wetted perimeter (P)
+   
+    Rhy [m] = A [m^2] / P [m]
+     
+     
+   3.7) Calculation of the discharge (Q)
+   
+   The discharge gets calculated as in the chapter ***One dimensional numeric-hydraulic-modelling*** above describet:
+   
+    Q [m^s/s] = kst * Rhy^(2/3) [m] * J^(1/2) * A [m^2]
    
    
    
