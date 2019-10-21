@@ -56,7 +56,7 @@ The whole workflow of this project takes place in the script ***1D_PQ_Beziehung_
    *numpy* | create arrays to work with
    *pandas* | load profiles and connect seperate lists
    *matplot* | plot figures
-   *prettytable* | show results in a table
+   *prettytable* | show results as a table
 
   **2) Define parameters:**
   
