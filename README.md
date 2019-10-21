@@ -34,7 +34,7 @@ The river cross sections got measured with DGPS (Differential Global Positioning
  
     Q [l/s] = vm [m/s] * A [m^2]
  
- Whereat the flow velocity (vm):
+ Whereat the flow velocity (vm) gets calculated:
  
     vm [m/s] = kst [] * Rhy^(2/3) [m] * J^(1/2) [m/m]
    
@@ -42,6 +42,12 @@ The river cross sections got measured with DGPS (Differential Global Positioning
     Rhy  = hydraulic radius 
     J    = flow gradient 
 
+ The hydraulic radius (Rhy) gets calculated out of the two profile-known parameters:
+ 
+    Rhy [m] = A [m^2] / P [m]
+    
+    P   = wetted perimeter
+ 
 ## Workflow
 The whole workflow of this project takes place in the script ***1D_PQ_Beziehung_kwy_5.0.py***. The script is subdivided in differnet steps, marked with a title.
 
