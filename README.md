@@ -18,14 +18,14 @@ The areas of intrest involve four rivers in the region of Susten and Grimsel:
 
 The idea of those four alpine rivers are the different types of morphology. Steinwasser and Wendenwasser are two alpine rivers with medium steepness. Giglibach is an alpine torrent and Hasliaare, as the prime site, is a wide and shallow river, investigated in Innertkirchen.
 
-## Input parameters, measurements and processing
+## Input parameters
 The success of this project was jointed with a lot of field work and data collection. The following input parameters are necessary to run the script:
   - River cross sections
   - Digital elevation models to set the flow gradient
   - Permanent stage mesurements at the particular cross sections
   - Discharge measurements to kalibrate the roughness coefficient
 
-The river cross sections was measured with DGPS (Differential Global Positioning System). The DGPS cross sections are directly loaded into the python script as text files. To get a more precise (higher point density) cross section, the area of interest were flown by a DJI professional drone. The created photographs have been post processed with a structure from motion software (Agisoft PhotoScan) to generate a digital elevation model (DEM). The DEM was used to create high precision cross sections and to calculate the flow gradient. To get those inforamtions out of the DEM, the Software QGIS Desktop (2.18.10) was used. The permanent recording of the water-level has been done by pressure probes by Altecno. The probe measures the stage every minute and creates an average over ten minutes. The information about the water level is necessary in combination with the manually measured discharge and the resulting stage-discharge-relationship. The discharge has been measured with the salt dilution method, which means, that a certain amount of salt (dependent on the amount of discharge - 5kg salt for one cubic meter per second discharge) gets added to the river. After enough stirring distance the salt flows through an analyzer of electronic conductivity, which leads through the integration of the salt curve to the discharge.
+You will find more precise information about the measuring and processing in the file **REPORT????** in the project folder.
 
 ## One-dimensional numeric-hydraulic-modelling
  One dimensional numeric hydraulic modelling depends on the flow formula after Manning Strickler. In this sence the discharge (Q) results out of the multiplication of flow velocity (vm), which is supposed to be equal in the whole cross section, and the flown through area (A).
