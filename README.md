@@ -2,7 +2,7 @@
 ## Automated stage-discharge-relationships out of DGPS and drone-crosssections in an alpine river
 ### *Python 2.7, IDE PyCharm 2018.2.5 Community Edition*
 
-This project is part of my master thesis about "Discharge measurements in alpine rivers - Opportunities of numeric hydraulic stage-discharge-relationships". The whole project got developped in the partnership of the Institute of Geography, department of hydrology and the hydropower company Kraftwerke Oberhasli AG (KWO).
+This project is part of my master thesis about "Discharge measurements in alpine rivers - Opportunities of numeric hydraulic stage-discharge-relationships". The whole project got developed in the partnership of the Institute of Geography, department of hydrology and the hydropower company Kraftwerke Oberhasli AG (KWO).
 
 Author: Kevin Wyss, 14-104-640, kevin.wyss@students.unibe.ch, University of Berne, Seminar Geodata analysis and modelling 2019
 
