@@ -4,6 +4,8 @@
 
 This project is part of my master thesis about "Discharge measurements in alpine rivers - Opportunities of numeric, hydraulic stage-discharge-relationships". The whole project got developed in partnership with the Institute of Geography, department of hydrology and the hydropower company Kraftwerke Oberhasli AG (KWO).
 
+You will find a more precise description of the project overview in the **Report_kwy.pd**.
+
 Author: Kevin Wyss, 14-104-640, kevin.wyss@students.unibe.ch, University of Bern, Seminar Geodata analysis and modelling 2019
 
 ## Goal of the script
