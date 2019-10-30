@@ -76,7 +76,7 @@ The whole workflow of this project takes place in the script ***1DPQBeziehung_kw
    
    3.1) Profile gets loaded
    
-   The profile which was defined in step 2) gets loaded into the script. In the same step the geographical altitude gets transformed into meter-hights. This happens by the subtraction of all altitudes with the minimum altitude of the list. After this step, every point in the profile list has an x- and y-coordinate. The x-coordinate stays for the measured distance (starting at 0 m) and the y-coordinate stays for the hight.
+   The profile which was defined in step 2) gets loaded into the script. In the same step the geographical altitude gets transformed into meter-hights. This happens by the subtraction of all altitudes with the minimum altitude of the list. After this step, every point in the profile list has an x- and y-coordinate. The x-coordinate stays for the measured distance of the cross section (starting at 0 m) and the y-coordinate stays for the hight.
    
    
    3.2) Intersections of the profile
