@@ -10,7 +10,7 @@ Author: Kevin Wyss, 14-104-640, kevin.wyss@students.unibe.ch, University of Bern
 The goal of this python script is to create an automated stage-discharge-relationship out of a measured river cross section.
 
 ## Investigation Area
-The areas of interest involve four rivers in the region of Susten and Grimsel:
+The areas of interest involve four rivers in the region of Susten and Grimsel in the Bernese Oberland:
   - Steinwasser
   - Giglibach
   - Wendenwasser
