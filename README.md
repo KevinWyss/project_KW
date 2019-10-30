@@ -72,7 +72,7 @@ The whole workflow of this project takes place in the script ***1DPQBeziehung_kw
    
    **3) Beginning of the loop:**
    
-   Before the loop starts, the script creates five empty lists, which are then filled with the calculated area (A), wet perimeter (P), hydraulic radius (Rhy) and the discharge (Q) for different hights (H). *H* is starting at 0.1, 0.11, 0.12, [...] until the users definded water-level (h). The loop is used to do all the calculations below (3.2 - 3.7) for all the different hights (H), to get a stage-discharge-relation ship in the end.
+   Before the loop starts, the script creates five empty lists, which are then filled with the calculated area (A), wet perimeter (P), hydraulic radius (Rhy) and the discharge (Q) for different hights (H). *H* is starting at 0.1, 0.11, 0.12, [...] until the users definded water-level (h). The loop is used to do all the calculations below (3.2 - 3.7) for all the different hights (H), to get a stage-discharge-relationship in the end.
    
    3.1) Profile gets loaded
    
