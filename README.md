@@ -98,7 +98,7 @@ As shown in the example above, there are 20 other conditions which need to be ch
    
    3.4) Calculation of the area (A)
    
-   The area (A) to be calculated is the area between the water-level (h) and the profile curve. This calculation happens for the area between each profile point like this:
+   The area (A) to be calculated is the area between the water-level (h) and the profile curve. This integration calculation happens for the area between each profile point like this:
    
     A [m^2] = 0.5 * (x2 - x1) * (WD1 + WD2)
       
