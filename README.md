@@ -47,7 +47,7 @@ The river cross sections were measured with DGPS (Differential Global Positionin
     P   = wetted perimeter
  
 ## Workflow
-The whole workflow of this project takes place in the script ***1D_PQ_Beziehung_kwy_5.0.py***. The script is subdivided in differnet steps, each marked with a title.
+The whole workflow of this project takes place in the script ***1DPQBeziehung_kwy.py***. The script is subdivided in differnet steps, each marked with a title.
 
   **1) Load four packages:**
 
