@@ -96,9 +96,9 @@ As shown in the example above, there are 20 other conditions which need to be ch
    In this step the new x- and y-coordinates (with the intersection points) were set into a new list, which then gets adapted to the water-level (h). The points higher than h get set on the water-level, which results in a thinned profile.
    
    
-   3.4) Calculation of the area (A)
+   3.4) Calculation of the area (A) with integration
    
-   The area (A) to be calculated is the area between the water-level (h) and the profile curve. This integration calculation happens for the area between each profile point like this:
+   The area (A) to be calculated is the area between the water-level (h) and the profile curve. This calculation happens for the area between each profile point like this:
    
     A [m^2] = 0.5 * (x2 - x1) * (WD1 + WD2)
       
