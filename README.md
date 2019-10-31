@@ -67,7 +67,7 @@ The whole workflow of this project takes place in the script ***1DPQBeziehung_kw
    Shortcut | Parameter
    ------------ | -------------
    *pn* | define the profile name
-   *fn* | define the file name which should be stored in the same folder as the script (text file)
+   *fn* | define the file name of the river cross section (qp) which should be stored in the same folder as the script (text file)
    *h* | define the water-level which should be investigated (cm)
    *kst* | define the roughness value after Manning Strickler (*PDF_Report_Chapter ????*)
    *J* | define the flow gradient as a float (m/m)
