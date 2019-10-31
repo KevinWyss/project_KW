@@ -153,5 +153,5 @@ To get the whole area between water-level and profile, all these sub-areas get s
    
    As the last step, the script plotts the resulting stage-discharge-relationship for the entered cross section. This relationship is based on the calculations 3.2 - 3.7 for all different hights (H).
    
-# Results
-To get a more precise insight of the resulting output of the script, see the PDF "???" in my project folder.
+# Results and interpretation
+To get a more precise insight of the resulting output of the script, see the PDF "Report_kwy.pdf" in my project folder.
