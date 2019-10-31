@@ -69,7 +69,7 @@ The whole workflow of this project takes place in the script ***1DPQBeziehung_kw
    *pn* | define the profile name
    *fn* | define the file name of the river cross section (qp) which should be stored in the same folder as the script (text file)
    *h* | define the water-level which should be investigated (cm)
-   *kst* | define the roughness value after Manning Strickler (*PDF_Report_Chapter ????*)
+   *kst* | define the roughness value after Manning Strickler 
    *J* | define the flow gradient as a float (m/m)
    
    **3) Beginning of the loop:**
@@ -154,4 +154,4 @@ To get the whole area between water-level and profile, all these sub-areas get s
    As the last step, the script plotts the resulting stage-discharge-relationship for the entered cross section. This relationship is based on the calculations 3.2 - 3.7 for all different hights (H).
    
 # Results and interpretation
-To get a more precise insight of the resulting output of the script, see the PDF "Report_kwy.pdf" in my project folder.
+To get a more precise insight of the resulting output of the script, see the PDF "Report_kwy.pdf" in the project folder.
